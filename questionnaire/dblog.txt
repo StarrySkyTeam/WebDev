@@ -61,3 +61,8 @@
 2016-03-30 01:16:29 insert data INSERT INTO questionnaire(id,name,childage,tel,qq,question) values('2','啊','啊','啊','啊','0110000001000000')
 2016-03-30 01:16:29 sqlQuery:INSERT INTO questionnaire(id,name,childage,tel,qq,question) values('2','啊','啊','啊','啊','0110000001000000')
 2016-03-30 01:16:29 mission complete, lasted 0.2761378288269 seconds
+2016-03-30 01:46:22 sqlQuery:SELECT count(*) FROM questionnaire WHERE 1=1 LIMIT 0,1
+2016-03-30 01:46:22 get one record SELECT count(*) FROM questionnaire WHERE 1=1 LIMIT 0,1
+2016-03-30 01:46:22 insert data INSERT INTO questionnaire(id,name,childage,tel,qq,question) values('4','f','f','f','f','0000000000000000')
+2016-03-30 01:46:22 sqlQuery:INSERT INTO questionnaire(id,name,childage,tel,qq,question) values('4','f','f','f','f','0000000000000000')
+2016-03-30 01:46:22 mission complete, lasted 0.28270888328552 seconds

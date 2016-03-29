@@ -25,3 +25,5 @@ foreach($check as $val){
 }
 $insertArray=array('id'=>$id,'name'=>$name,'childage'=>$childage,'tel'=>$tel,'qq'=>$qq,'question'=>$question);
 $dataObj->insert('questionnaire',$insertArray);
+header("Location:success.html"); 
+exit();
