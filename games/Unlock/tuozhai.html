@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+#div1 {width:100px;height:100px;padding:10px;border:1px solid #ff0000;
+	background-size: cover;
+	margin: 130px auto;
+}
+#div {width:40%;height:300px;padding:10px;border:1px solid #aaaaaa;
+	background: url(52.png);
+	background-size: cover;
+	margin: 20px auto;
+}
+p{
+	text-align: center;
+	margin-top: 20px; 
+	font-weight: bold;
+	color: red;
+}
+#nextJu{
+	float: right;
+    background: red;
+    border: transparent;
+    padding: 10px 20px;
+    font-size: 20px;
+
+}
+#drag1{
+	width: 100px;
+	float: left;
+}
+#divDrag{
+	width: 40px;
+	float: left;
+	margin-top:30px; 
+	margin-left: 200px;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+</head>
+<body>
+<div style="text-align:center">
+	<p id="pName">请把棋子拖放到棋盘上</p>
+	<button id="nextJu" onclick="nextGame()">下一局</button>
+	<div id="div"> 
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		</div>
+	</div>
+</div>
+<div id="divDrag">
+	<img id="drag1" src="51.png" draggable="true" ondragstart="drag(event)" />
+</div>
+
+
+<script type="text/javascript">
+var i=0;
+var divImgUrl=new Array("10.png","80.png");
+var dragSrc=new Array("11.png","81.png");
+var Awidth=new Array("400px","600px");
+var Aheight=new Array("400px","480px");
+var MentionText=new Array("请将鼠标放在方框内","请将筷子放在方框内");
+
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+	ev.preventDefault();
+	var data=ev.dataTransfer.getData("Text");
+	ev.target.appendChild(document.getElementById(data));
+	var p=document.getElementById("pName");
+	p.innerHTML="干得漂亮";
+	var but=document.getElementById("nextJu");
+	but.style.visibility="visible";
+}
+
+$(function(){
+    $('#div').height($(window).height()*0.5);
+    $('#div').width($(window).width()*0.4);
+});
+
+function nextGame(){
+	var but=document.getElementById("nextJu");
+	but.style.visibility="hidden";
+
+	var p=document.getElementById("pName");
+	p.innerHTML=MentionText[i];
+
+	var div=document.getElementById("div");
+	//div.style.width=Awidth[i];
+	//div.style.height=Aheight[i];
+	div.style.background = "#f3f3f3 url("+divImgUrl[i]+") no-repeat right top";
+
+	var divDrag=document.getElementById("divDrag");
+	divDrag.style.float="right";
+	var drag1=document.getElementById("drag1");
+	drag1.src=dragSrc[i];
+	drag1.style.float="right";
+	divDrag.appendChild(drag1);
+
+	i++;
+}
+
+</script>
+</body>
+</html>
