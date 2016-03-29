@@ -5,8 +5,6 @@
 	<title>Document</title>
 </head>
 <body>
-hello ,debug team	
+hello ,we are debug team	
 </body>
 </html>
-<?php
-phpinfo();

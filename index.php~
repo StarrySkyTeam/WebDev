@@ -8,3 +8,5 @@
 hello ,debug team	
 </body>
 </html>
+<?php
+phpinfo();
