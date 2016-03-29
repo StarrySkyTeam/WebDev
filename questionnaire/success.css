@@ -1,0 +1,26 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:'Microsoft YaHei';
+}
+header{
+	width: 800px;  
+	height: 200px;
+	position: absolute;
+	top: 50%; left: 50%;
+	margin-left: -400px; 
+	margin-top: -100px; 
+}
+#title{	
+	text-align: center;
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+#explain{
+	text-align: center;
+	font-size: 20px;
+}
+a{
+	text-decoration: none;
+	color:#26ca28;
+}

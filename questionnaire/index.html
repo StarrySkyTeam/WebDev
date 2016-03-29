@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="main.js"></script>
+	<title>自闭症儿童诊断视觉听觉测试</title>
+</head>
+<body>
+<form method="post" id="questionnaire" action="process.php">
+	<header>
+		<div id="title">
+			自闭症儿童诊断视觉听觉测试
+		</div>
+		<div class="explain">
+			<p>请注意：该问卷由家长根据自己孩子的实际情况进行填写</p>
+			<p>本问卷用于诊断孩子在视觉和听觉方面的自闭症症状以及是否为真性自闭症！（非常重要）</p>
+			<p>在填写完成以后，我们将会把结果反馈给我们的合作机构森熙教育，将由他们对问卷进行专业分析</p>
+		</div>
+	</header>
+	<div id="content">
+		<section>
+			<div class="cb">
+				<input id="check1" name="check1" type="checkbox" value="1"/>
+				<label for="check1"></label>
+			</div>
+			<div class="con">
+				<div class="subject">1.玩耍时把家弄乱?</div>	
+				<div class="remark">(不是故意的，是无意的行为)</div>
+			</div>
+		</section>
+		<section>
+			<div class="cb">
+				<input id="check2" name="check2" type="checkbox" value="1"/>
+				<label for="check2"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">2.不会模仿?</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check3" name="check3" type="checkbox" value="1"/>
+				<label for="check3"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">3.不能记住和分辨同伴、小朋友?</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check4" name="check4" type="checkbox" value="1"/>
+				<label for="check4"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">4.喜欢背诵儿歌、学唱歌?</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check5" name="check5" type="checkbox" value="1"/>
+				<label for="check5"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">5.认知新东西喜欢用摸、闻、尝、舔等方法?</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check6" name="check6" type="checkbox" value="1"/>
+				<label for="check6"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">6.喜欢画画?</div>
+				<div class="remark">(边画边自言自语，画满一张纸，画的质量很差，但可以把画的图形编成一个故事)</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check7" name="check7" type="checkbox" value="1"/>
+				<label for="check7"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">7.经常被什么东西绊倒或磕到?</div>
+				<div class="remark">(比如走路会被一个很小的台阶绊倒，或碰到桌角)</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check8" name="check8" type="checkbox" value="1"/>
+				<label for="check8"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">8.说话时不对视?</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check9" name="check9" type="checkbox" value="1"/>
+				<label for="check9"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">9.说话无音调、无节奏，像白开水一样?</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check10" name="check10" type="checkbox" value="1"/>
+				<label for="check10"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">10.对颜色敏感?</div>
+				<div class="remark">(看到颜色鲜艳的东西就指认或很小就分得清颜色)</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check11" name="check11" type="checkbox" value="1"/>
+				<label for="check11"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">11.认字自然?</div>
+				<div class="remark">(没有特别的、反复的教，就可以认识字)</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check12" name="check12" type="checkbox" value="1"/>
+				<label for="check12"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">12.喜欢玩迷宫、找不同等游戏?</div></div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check13" name="check13" type="checkbox" value="1"/>
+				<label for="check13"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">13.对数字敏感?</div>
+				<div class="remark">(不仅仅会背数字，还对数字的逻辑关系敏感)</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check14" name="check14" type="checkbox" value="1"/>
+				<label for="check14"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">14.可以自己玩拼图游戏?</div>
+				<div class="remark">(电脑上的拼图游戏或拼图版都可以)</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check15" name="check15" type="checkbox" value="1"/>
+				<label for="check15"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">15.手机或电子游戏玩得好?</div>
+				<div class="remark">(玩手机一教就会，甚至无师自通。只要是新的游戏很快上手)</div>
+			</div>
+		</section>	
+		<section>
+			<div class="cb">
+				<input id="check16" name="check16" type="checkbox" value="1"/>
+				<label for="check16"></label>
+			</div>			
+			<div class="con">
+				<div class="subject">16.语言长度不够?</div>
+				<div class="remark">(与同龄孩子相比能说出句子的长度明显要短)</div>
+			</div>
+		</section>
+		<div id="personal">
+			<div class="explain">
+				<p>问答部分已经填写完成了，请继续留下您的联系方式，以便于我们的合作方森熙教育根据您的孩子的症状判断完之后和您联系</p>
+			</div>
+			<div id="contact">
+				<label for="name">您的姓名：</label>
+				<input id="name" type="text" name="name"><br/>
+				<label for="childage">孩子年龄：</label>
+				<input id="childage" type="text" name="childage"><br/>
+				<label for="tel">移动电话：</label>
+				<input id="tel" type="text" name="tel"><br/>
+				<label for="qq">Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q：</label>
+				<input id="qq" type="text" name="qq"><br/>
+				<p id="tip"></p>
+				<input type="button" value="提交测评" onClick="sub();" />
+			</div>
+		</div>	
+	</div>
+</form>
+</body>
+</html>

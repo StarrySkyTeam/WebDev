@@ -1,0 +1,117 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family:'Microsoft YaHei';
+}
+body{
+	padding-top: 10px;
+	width: 80%;
+	margin:0 auto;
+}
+#title{
+	text-align: center;
+	font-size: 25px;
+	padding-bottom: 20px;
+}
+.explain{
+	text-align: center;
+}
+#content{
+	margin-top: 10px;
+}
+section{
+	height: 40px;
+	padding-left: 4%;
+	clear: both;
+}
+
+.cb{
+	width: 120px;
+	height: 40px;
+	background: #333;
+	margin: 20px 60px;
+	float:left; 
+	border-radius: 50px;
+	position: relative;
+}
+.cb:before{
+	content: '是';
+	position: absolute;
+	top: 10px;
+	left: 16px;
+	height: 2px;
+	color: #26ca28;
+	font-size: 16px;
+}
+.cb:after{
+	content: '否';
+	position: absolute;
+	top: 12px;
+	left: 84px;
+	height: 2px;
+	color: #ddd;
+	font-size: 16px;
+}
+.cb label{
+	display: block;
+	width: 52px;
+	height: 22px;
+	border-radius: 50px;
+ 
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 9px;
+	z-index: 1;
+	left: 12px;
+	background: #ddd;
+}
+.cb input{
+	display: none;
+}
+.cb input[type=checkbox]:checked + label{
+	left: 60px;
+	background: #26ca28;
+}
+.con{
+	float: left;
+}
+.subject{
+	font-size: 18px;
+	margin-top: 18px;
+}
+.remark{
+	text-indent: 15px;
+}
+
+#personal{
+	clear: both;
+	margin-top: 50px;
+}
+#personal p{
+	font-size: 20px;
+}
+
+#contact{
+	padding:20px;
+	text-align: center;
+}
+#contact input{
+	border-radius: 6px;
+	border:1px solid #ddd;
+	transition: box-shadow 0.30s ease-in-out;
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+#contact input:focus{
+	outline:none;
+	border:#26ca28 1px solid;
+	box-shadow: 0 0 8px #26ca28;
+}
+#contact label{
+	font-size: 20px;
+}
+#tip{
+	margin:10px;
+	color:#ff2d2d;
+}
