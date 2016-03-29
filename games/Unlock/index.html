@@ -5,9 +5,11 @@
 <style type="text/css">
 #div1 {width:100px;height:100px;padding:10px;border:1px solid #ff0000;
 	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 	margin: 130px auto;
 }
-#div {width:40%;height:300px;padding:10px;border:1px solid #aaaaaa;
+#div {padding:10px;border:1px solid #aaaaaa;
 	background: url(52.png);
 	background-size: cover;
 	margin: 20px auto;
@@ -33,7 +35,6 @@ p{
 #divDrag{
 	width: 40px;
 	float: left;
-	margin-top:30px; 
 	margin-left: 200px;
 }
 </style>
@@ -54,12 +55,12 @@ p{
 
 
 <script type="text/javascript">
-var i=0;
-var divImgUrl=new Array("10.png","80.png");
-var dragSrc=new Array("11.png","81.png");
-var Awidth=new Array("400px","600px");
-var Aheight=new Array("400px","480px");
-var MentionText=new Array("请将鼠标放在方框内","请将筷子放在方框内");
+var divImgUrl=new Array("10.png","80.png","20.png","62.png","70.png","90.png","30.png");
+var dragSrc=new Array("11.png","81.png","21.png","61.png","71.png","91.png","31.png");
+var dragWidth=new Array("100px","200px","300px","400px","250px","350px","150px");
+var dragHeight=new Array("200px","400px","300px","800px","900px","1000px","1100px");
+
+var MentionText=new Array("请将鼠标放在键盘上","请将筷子放在方框内","请将酒杯放在酒瓶旁","请将月亮放在云朵下","请将铅笔放在书本上","请牙膏放在牙刷内","请将花儿插在花盘内");
 
 function allowDrop(ev)
 {
@@ -82,12 +83,27 @@ function drop(ev)
 	but.style.visibility="visible";
 }
 
+var ScreenWidth=window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
+
+var ScreenHeight=window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+//var ScreenWidth=$(window).width();
+//var ScreenHeight=$(window).height();
+
 $(function(){
-    $('#div').height($(window).height()*0.5);
-    $('#div').width($(window).width()*0.4);
+	var but=document.getElementById("nextJu");
+	but.style.visibility="hidden";
+    $('#div').height(ScreenHeight*0.6);
+    $('#div').width(ScreenHeight*0.6);
+    $('#divDrag').height(ScreenHeight*0.1);
+    $('#divDrag').width(ScreenHeight*0.1);
+    //alert(ScreenWidth+"长"+ScreenHeight);          //1188*601
 });
 
 function nextGame(){
+	var i = Math.floor(Math.random()*7);
+	var pw = Math.floor(Math.random()*7);
+	var qh = Math.floor(Math.random()*7);
+	//var i=6;
 	var but=document.getElementById("nextJu");
 	but.style.visibility="hidden";
 
@@ -95,18 +111,19 @@ function nextGame(){
 	p.innerHTML=MentionText[i];
 
 	var div=document.getElementById("div");
-	//div.style.width=Awidth[i];
-	//div.style.height=Aheight[i];
-	div.style.background = "#f3f3f3 url("+divImgUrl[i]+") no-repeat right top";
+	div.style.background = "#f3f3f3 url("+divImgUrl[i]+") no-repeat";
+	div.style.backgroundSize="cover";
 
 	var divDrag=document.getElementById("divDrag");
-	divDrag.style.float="right";
+	//divDrag.style.float="right";
+	divDrag.style.backgroundSize="cover";
+	divDrag.style.position="absolute";
+	divDrag.style.top=dragWidth[pw];
+	divDrag.style.right=dragHeight[qh];
 	var drag1=document.getElementById("drag1");
 	drag1.src=dragSrc[i];
-	drag1.style.float="right";
+	//drag1.style.float="right";
 	divDrag.appendChild(drag1);
-
-	i++;
 }
 
 </script>
