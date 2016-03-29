@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Alphabet_drawing</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <style type="text/css">
+      .fullScreen{
+        text-align: center;
+      }
+      .fullScreen input{
+        font-size:16px;
+        background:#eee;
+        border:none;
+        border-radius:5px;
+        line-height: 30px;
+      }
+      .emscripten{
+        box-shadow: none !important; 
+      }
+    </style>
+  </head>
+  <body class="template">
+    <div class="template-wrap clear">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+      <br>
+      <div class="fullScreen"><input type="button" value="加载时间较长，请耐心等待，完成后，点击可开始游戏" onclick="SetFullscreen(1);"/> </div>
+    </div>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/WebGL.data",
+    codeUrl: "Release/WebGL.js",
+    memUrl: "Release/WebGL.mem",
+  };
+</script>
+<script src="Release/UnityLoader.js"></script>
+  </body>
+</html>
