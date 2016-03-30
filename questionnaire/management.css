@@ -1,0 +1,63 @@
+*{
+	padding:0;
+	margin: 0;
+}
+body{
+	padding-top: 10px;
+	width: 80%;
+	margin:0 auto;
+}
+#title{
+	text-align: center;
+	font-size: 25px;
+	padding-bottom: 20px;
+}
+#content{
+	margin-top: 10px;
+}
+
+.result{
+	margin:0 auto;
+	margin-top:20px;	
+	table-layout:fixed;
+	border-collapse:collapse;
+	border-spacing:0;
+	border:solid #ccc 1px;
+    border-radius:6px;
+	box-shadow:0 1px 1px #ccc;
+}
+.result tr:hover{
+	background:#fbf8e9;
+	transition:all 0.1s ease-in-out;
+}
+.result td, .result th{
+	border-left:1px solid #ccc;
+	border-top:1px solid #ccc;
+	padding:10px;
+	text-align:center;
+}
+.result th{
+	background-color:#dce9f9;
+	background-image:linear-gradient(top,#ebf3fc,#dec9f9);
+	box-shadow:0 1px rgba(255,255,255,.8) inset;
+	border-top:none;
+	text-shadow:0 1px 0 rgba(255,255,255,.5);	
+}
+.result td:first-child, .result th:first-child{
+	border-left:none;
+}
+.result th:first-child{
+	border-radius:6px 0 0 0;
+}
+.result th:last-child{
+	border-radius:0 6px 0 0;
+}
+.result th:only-child{
+	border-radius:6px 6px 0 0;
+}
+.result tr:last-child td:first-child{
+	border-radius:0 0 0 6px;
+}
+.result tr:last-child td:last-child{
+	border-radius:0 0 6px 0;
+}

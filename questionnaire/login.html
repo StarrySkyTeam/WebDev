@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<script src="login.js"></script>
+	<title>后台查询登录</title>
+</head>
+<body>
+	<header>
+		<p>后台查询登录</p>
+			<form id="login" action="management.php" method="post">
+				<label for="username">用户名:</label>
+				<input type="text" id="username" name="username"/><br/>
+				<label for="password">密&nbsp;&nbsp;&nbsp;码:</label>
+				<input type="password" id="password" name="password"/><br/>
+				<p id="wrong"></p>	
+				<input type="button" value="&nbsp;&nbsp;&nbsp;&nbsp;登录&nbsp;&nbsp;&nbsp;&nbsp;" onClick="sub();">
+			</form>
+	</header>
+</body>
+</html>

@@ -1,10 +1,12 @@
 <?php
-header("Content-type: text/html; charset=utf-8"); 
 require_once('config.php');
 require_once('database.class.php');
 $form=$_POST;
+var_dump($_POST);
 $name=addslashes($form['name']);
-$childage=addslashes($form['childage']);
+$childname=addslashes($form['childname']);
+$childsex=addslashes($form['childsex']);
+$childbirth=addslashes($form['childbirth']);
 $tel=addslashes($form['tel']);
 $qq=addslashes($form['qq']);
 $check=array();
@@ -23,7 +25,7 @@ $question='';
 foreach($check as $val){
 	$question=$question.(string)$val;
 }
-$insertArray=array('id'=>$id,'name'=>$name,'childage'=>$childage,'tel'=>$tel,'qq'=>$qq,'question'=>$question);
+$insertArray=array('id'=>$id,'name'=>$name,'childname'=>$childname,'childsex'=>$childsex,'childbirth'=>$childbirth,'tel'=>$tel,'qq'=>$qq,'question'=>$question);
 $dataObj->insert('questionnaire',$insertArray);
 header("Location:success.html"); 
 exit();
